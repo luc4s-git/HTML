@@ -1,0 +1,78 @@
+/* 
+    ("*") Seletor "all" (Tudo) - Seleciona todos os elementos da página.
+    Geralmente utilizado para zerar o css.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Seletor por tag - Seleciona todas as tags referenciadas no css da página.
+    Aplicado em todas as tags "p".
+*/
+
+p{
+    color: rgb(0, 139, 7);
+}
+
+/*
+    Seleção de descendente - Seleciona o ultimo elemento referenciado para sofrer alteração.
+    Elemento fora da ultima seção selecionada não sofre alteração.
+*/
+
+body div section h2{
+    color: blueviolet;
+}
+
+/*
+    (",") Seleção multipla - Seleciona multiplos elementos com a utilização da virgula.
+    Tanto h2 e h3 sofrem alteração.
+*/
+
+h3,
+body div div p
+{
+    color: red;
+}
+
+/*
+    (".") Seleção por classe - Altera o elemento que foi selecionado por meio de classe
+*/
+
+.heading{
+    color: aqua;
+}
+
+.paragraph{
+    color: violet;
+}
+
+/*
+    Dessa forma serão alteradas todos os elementos selecionados abaixo do elemento que tem a classe main-content. No caso h1.
+*/
+
+.main-content h1{
+    color: brown;
+}
+
+.main-content p{
+    color: chocolate;
+}
+
+/*
+    (".classe.classe") Seleção por classe multipla - Altera os elementos que possuirem ambas as classes
+*/
+
+.pai.filha{
+    color: red;
+}
+
+/*
+    Child Combinator (">") Seleciona a filha direta da classe. 
+*/
+
+.pai > .filha {
+    color: blue;
+}

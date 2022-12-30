@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    overflow:auto;
+}
+
+div-pai{
+
+}
+
+.div-filha-um, .div-filha-dois{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    position: static;
+
+}
+
+/*
+    Position RELATIVE -> Elemento vai poder sofrer modificação no posicionamento porem outros elementos se comportam como se a div ainda estivesse na posição original;
+    Position ABSOLUTE -> Elemento vai poder sofrer modificação no posicionamento porem outros elementos se comportam como se a div não estivesse mais na posição original. Por cima;
+*/
+
+/*
+    Posicionamento de div no meio da tela, passo a passo:
+
+    {
+        position: absolute; > Permitindo modificação do posicionamento.
+        top: 50%; > 50% relativo ao elemento pai.
+        margin-top: -150px; > Como o elemento tem 300px e o posicionamento dele é centralizado pela quina, se retirar metade o elemento vai acabar centralizando na tela;
+        left: 50%; > 50% relativo ao elemento pai.
+        margin-left: -150px; > Como o elemento tem 300px e o posicionamento dele é centralizado pela quina, se retirar metade o elemento vai acabar centralizando na tela;
+    }
+
+*/
+
+/*
+    z-index: 2; > z-index mexe no indice Z do elemento, ou seja, na sua profundidade na tela. Como a div-filha-dois tem um indice z de 1 e a div-filha-um de 2, a filha um vai ficar por cima da filha dois;
+*/
+
+.div-filha-um{
+    background-color:darkslategray;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 2;
+}
+
+.div-filha-dois{
+    float: left;
+    position: absolute;
+    background-color: rgba(71, 61, 139, 0.863);
+    z-index: 1;
+}

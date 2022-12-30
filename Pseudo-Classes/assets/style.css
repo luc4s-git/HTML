@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    Hoover - Quando mouse passar em cima a configuração aplica;
+*/
+
+.heading:hover{
+    color: red;
+}
+
+.heading{
+    transition: all 1000ms ease-in-out;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: black;
+    background-color: darkslategray;
+}
+
+a:active{
+    background: darkslategray;
+    color: white;
+}
+
+input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+input:enabled{
+    background-color: rebeccapurple;
+}
+
+.checkbox-sibling:checked + .nav{
+    color: red;
+    display: block;
+}

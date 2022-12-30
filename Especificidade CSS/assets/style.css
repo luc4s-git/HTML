@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*
+
+    ID      Classes, Atributos e Pseudo-Classes     Elementos e Pseudo-Elementos
+1)  1       0                                       0
+2)  0       1                                       0
+3)  1       1                                       0
+4)  1       0                                       1
+5)  1       1                                       1
+6)  2       1                                       1
+7)  2       3                                       3
+
+*/
+
+/*1*/
+
+#paragraph{
+    background-color: darkslategrey;
+    color: white;
+}
+
+/*2*/
+
+.paragraph{
+    background-color: bisque;
+    color: black;
+}
+
+/*3*/
+
+#paragraph.paragraph{
+    background-color: darkolivegreen;
+    color: white;
+}
+
+/*4*/
+
+p#paragraph{
+    background-color: aquamarine;
+    color: black;
+}
+
+/*5*/
+
+p#paragraph.paragraph{
+    background-color: darkgray;
+    color: black;
+}
+
+/*6*/
+
+#body p#paragraph.paragraph{
+    background-color: darkred;
+    color: white;
+}
+
+/*7*/
+
+body#body.body-class p#paragraph.paragraph::selection:hover{
+    background-color: aliceblue;
+}

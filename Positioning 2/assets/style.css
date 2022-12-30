@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+}
+
+ul{
+    height: 100px;
+    list-style: none;
+    overflow-y: auto;
+}
+
+ul li{
+    font-family: arial;
+}
+
+ul li.sticky{
+    position: sticky;
+    top: 0;
+}
